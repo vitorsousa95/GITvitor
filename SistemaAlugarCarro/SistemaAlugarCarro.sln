@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29020.237
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaAlugarCarro", "SistemaAlugarCarro.csproj", "{F2F641D6-6534-4294-A245-891E6F94A3CC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F2F641D6-6534-4294-A245-891E6F94A3CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2F641D6-6534-4294-A245-891E6F94A3CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2F641D6-6534-4294-A245-891E6F94A3CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2F641D6-6534-4294-A245-891E6F94A3CC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5E10199D-7604-4392-8683-6497AB079DFE}
+	EndGlobalSection
+EndGlobal
