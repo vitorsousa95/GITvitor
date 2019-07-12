@@ -81,11 +81,11 @@ namespace SistemadeBibliotecaOnline
         /// </summary>
         /// <param name="nomeLivro">Nome do livro a ser pesquisado</param>
         /// <returns>Retorna verdadeiro em caso o livro estiver livre para alocação.</returns>
-        public static bool PesquisaLivroParaAlocacao(string nomeLivro)
+        public static bool? PesquisaLivroParaAlocacao(string nomeLivro)
         {
             for (int i = 0; i < baseDeLivros.GetLength(0); i++)
             {
-                if (nomeLivro == baseDeLivros[i, 0])
+                if (CompararNomes(nomeLivro, baseDeLivros[i, 1]))
                 {
                     Console.WriteLine($"O livro:{nomeLivro}" +
                           $" pode ser alocado?:{baseDeLivros[i, 1]}");
@@ -94,7 +94,21 @@ namespace SistemadeBibliotecaOnline
                 }
             }
 
-            return false;
+            Console.WriteLine("Nenhum livro encontrado, deseja realizar uma nova busca?");
+            Console.WriteLine("Digite o numero da opção desejada: Sim - 1    Não - 2  ");
+
+            int.TryParse(Console.ReadKey().KeyChar.ToString(), out int opcao);
+
+            if (opcao == 1)
+            {
+                Console.WriteLine("Digite o nome do livro a ser pesquisado:");
+                nomeLivro = Console.ReadLine();
+
+                return PesquisaLivroParaAlocacao(nomeLivro);
+            }
+
+
+            return null;
         }
         /// <summary> 
         /// Metodo para alterar a informação de alocação do livro.
@@ -105,7 +119,7 @@ namespace SistemadeBibliotecaOnline
         {
             for (int i = 0; i < baseDeLivros.GetLength(0); i++)
             {
-                if (nomeLivro == baseDeLivros[i, 0])
+                if (CompararNomes(nomeLivro, baseDeLivros[i, 0]))
                 {
                     baseDeLivros[i, 1] = alocar ? "não" : "sim";
                 }
@@ -123,7 +137,9 @@ namespace SistemadeBibliotecaOnline
             MostrarMenuInicialLivros("Alocar um livro:");
 
             var nomedolivro = Console.ReadLine();
-            if (PesquisaLivroParaAlocacao(nomedolivro))
+            var resultadoPesquisa = PesquisaLivroParaAlocacao(nomedolivro);
+
+            if (resultadoPesquisa != null && resultadoPesquisa == true)
             {
                 Console.Clear();
                 MostrarSejaBemVindo();
@@ -158,7 +174,9 @@ namespace SistemadeBibliotecaOnline
             MostrarListaDeLivros();
 
             var nomedolivro = Console.ReadLine();
-            if (!PesquisaLivroParaAlocacao(nomedolivro))
+            var resultadoDePesquisa = PesquisaLivroParaAlocacao(nomedolivro);
+
+            if (resultadoDePesquisa != null && resultadoDePesquisa == false)
             {
                 Console.Clear();
                 MostrarSejaBemVindo();
@@ -170,7 +188,16 @@ namespace SistemadeBibliotecaOnline
 
                 Console.ReadKey();
             }
+
+            if (resultadoDePesquisa == null)
+            {
+                Console.WriteLine("Nenhum livro encontrado em nossa base de dados do sistema.");
+            }
         }
+        /// <summary>
+        /// Metodo que mostra onome do menu de acordo com a operação.
+        /// </summary>
+        /// <param name="operacao">Nome do menu a ser acessado.</param>
         public static void MostrarMenuInicialLivros(string operacao)
         {
             Console.Clear();
@@ -179,6 +206,20 @@ namespace SistemadeBibliotecaOnline
 
             Console.WriteLine($"Menu - {operacao}");
             Console.WriteLine("Digite o nome do livro para realizar a operação:");
+        }
+        /// <summary>
+        /// Metodo que compara duas string deixando em caixa baixa e removendo espaços vazios dentro da mesma.
+        /// </summary>
+        /// <param name="primeiro">Primeira string a ser comparada.</param>
+        /// <param name="segundo">Segunda string a ser comparada.</param>
+        /// <returns></returns>
+        public static bool CompararNomes(string primeiro, string segundo)
+        {
+            if (primeiro.ToLower().Replace(" ", "")
+                == segundo.ToLower().Replace(" ", ""))
+                return true;
+
+                return false;
         }
 
     }

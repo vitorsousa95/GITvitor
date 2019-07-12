@@ -9,16 +9,14 @@ namespace SistemaAlugarCarro
 {
     class Program
     {
-        static string[,] baseDeSeguros;
         static string[,] baseDeCarros;
         static void Main(string[] args)
         {
             CarregaBancoDeDados();
-            CarregaDadosSeguros();
-
+           
             var opcaomenu = MenuPrincipal();
 
-            while (opcaomenu != 5)
+            while (opcaomenu != 4)
             {
                 if (opcaomenu == 1)
                     MenuAlugarCarro();
@@ -27,7 +25,7 @@ namespace SistemaAlugarCarro
                     MenuDevolverCarro();
 
                 if (opcaomenu == 3)
-                    MenuSeguros();
+                    MenuDeSeguro();
 
                 MenuPrincipal();
             }
@@ -62,8 +60,7 @@ namespace SistemaAlugarCarro
             Console.WriteLine("\r\n1 - Alugar carro");
             Console.WriteLine("\r\n2 - Devolver carro");
             Console.WriteLine("\r\n3 - Contratar seguro");
-            Console.WriteLine("\r\n4 - Cancelar seguro");
-            Console.WriteLine("\r\n5 - Sair do sistema");
+            Console.WriteLine("\r\n4 - Sair do sistema");
             Console.WriteLine("\r\nDigite a opção desejada:");
             Console.WriteLine("\r\n");
 
@@ -196,72 +193,27 @@ namespace SistemaAlugarCarro
             Console.WriteLine("Digite o nome do carro para realizar a operação:");
         }
 
-        public static void MenuSeguros()
+        public static void MenuDeSeguro()
         {
-            MostrarMenuInicialCarros("Contratar Seguros");
+            Console.Clear();
+            BemVindo();
 
-            ListaDeSeguros();
+            Console.WriteLine("\n\n           Escolha uma opção:");
+            Console.WriteLine("\n\n1 - Seguro completo: R$500,00");
+            Console.WriteLine("2 - Seguro parcial: R$350,00");
+            Console.WriteLine("3 - Voltar");
+            Console.WriteLine("\n\nDigite a opção desejada");
 
-            var nomeSeguro = Console.ReadLine();
-            if (PesquisaCarroParaSeguro(nomeSeguro))
+            var opcaoDeSeguro = Console.ReadLine();
+
+            while (opcaoDeSeguro != 3)
             {
-                Console.Clear();
-                BemVindo();
-                Console.WriteLine("\n\nVocê deseja contratar esse seguro? para sim - 1  para não - 2");
 
-                AtualizarSeguro(nomeSeguro, Console.ReadKey().KeyChar.ToString() == "1");
-
-                Console.WriteLine("Seguro cadastrado com sucesso");
-
-                Console.ReadKey();
+            }
             }
 
         }
 
-        public static bool PesquisaCarroParaSeguro(string nomeSeguro)
-        {
-            for (int i = 0; i < baseDeSeguros.GetLength(0); i++)
-            {
-                if (nomeSeguro == baseDeSeguros[i, 0])
-                {
-                    Console.WriteLine($"O Seguro: {nomeSeguro}" +
-                          $" pode ser contratado?: {baseDeSeguros[i, 1]}");
-
-                    return baseDeSeguros[i, 1] == "sim";
-                }
-            }
-            return false;
-        }
-
-        public static void CarregaDadosSeguros()
-        {
-            baseDeSeguros = new string[2, 2]
-            {
-                { "Seguro completo", "sim" },
-                { "Seguro parcial", "sim" },
-
-            };
-        }
-
-        public static void AtualizarSeguro(string nomeSeguro, bool alugar)
-        {
-            for (int i = 0; i < baseDeSeguros.GetLength(0); i++)
-            {
-                if (nomeSeguro == baseDeSeguros[i, 0])
-                {
-                    baseDeSeguros[i, 1] = alugar ? "não" : "sim";
-                }
-            }
-
-        }
-
-        public static void ListaDeSeguros()
-        {
-
-            Console.WriteLine("Seguro completo");
-            Console.WriteLine("Seguro parcial");
-            Console.WriteLine("Escreva a opção desejada:");
-
-        }
+        
     }
 }
