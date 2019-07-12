@@ -10,23 +10,29 @@ namespace Sistema18_
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Digite uma opção:");
-            Console.WriteLine("(1) para menor de 18 \n(2) para maior de 18");
+            Console.WriteLine("Digite seu nome:");
 
-            int.TryParse(Console.ReadKey().KeyChar.ToString(), out int opcao);
+            var nomePessoa = Console.ReadLine();
 
-            if (opcao == 1)
+            Console.WriteLine("Digite sua idade");
+
+            int.TryParse(Console.ReadLine().ToString(), out int opcao);
+
+            if (opcao < 18)
             {
-                Console.WriteLine("\n\nVocê não pode entrar,nem beber! Volte para sua casa.");
+                Console.WriteLine("Você não pode consumir bebidas alcoólicas");
             }
 
-            if (opcao == 2)
-                {
-                    Console.WriteLine("\n\nVocê pode entrar, chapar e ficar doidão (*_*)");
-                }
+            if (opcao >18)
+            {
+                Console.WriteLine("Você pode consumir bebidas alcoólicas");
+            }
 
 
             Console.ReadKey();
+
+            
         }
+
     }
 }
