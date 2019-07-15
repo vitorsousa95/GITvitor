@@ -30,7 +30,19 @@ namespace CriacaoDeLista
 
                 Console.WriteLine(item);//aqui representamos a informação na tela
 
-            Console.ReadKey();//usamos o ReadKey para pausar a aplicação até que o usuario aperte qualquer tecla.
+                Console.ReadKey();//usamos o ReadKey para pausar a aplicação até que o usuario aperte qualquer tecla.
+
+            for (int i = 0; i < lista.Length; i++)
+                lista[i] = string.Empty;// Aqui limpamos o nosso valor dentro da coleção 
+
+                 //Laços de repetição que usamos para varrer nossa lista de maneira mais simples
+            foreach (var item in lista)//"var item" indica uma unidade da nossa lista "in lista"
+                //indica a lista que desejamos varrer
+
+                Console.WriteLine(item);//aqui representamos a informação na tela
+
+            Console.ReadKey();
         }
+
     }
 }
