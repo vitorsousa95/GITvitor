@@ -1,8 +1,8 @@
-﻿select
+﻿SET LANGUAGE Português
+select
 		Tipodog,
-		TotalDeVendas,
-		SUM(TotalDeVendas)  as 'VendasTotalMês',
-		MONTH(DataVenda) as 'Mês'
+		DATENAME(MONTH, DataVenda) as 'Mes',
+		SUM(TotalDeVendas) as 'Total de vendas'
 		from FoodTruckDoZezinho
-		group by Tipodog,TotalDeVendas,MONTH(DataVenda)
-		order by TotalDeVendas asc
+	Group by Tipodog,DATENAME(MONTH, DataVenda)
+	order by 'Total de vendas' desc
