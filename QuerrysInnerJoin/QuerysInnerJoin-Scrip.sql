@@ -173,7 +173,7 @@ select
 	from Vendas
 	where UsuInc BETWEEN 1 and 2;
 
---Quantidade total de vendas realizadas por Felipe e Giomar
+--Valor total de vendas realizadas por Felipe e Giomar
 select
 		Sum(Quantidade * Valor) as 'Valor Tota de Vendas'
 	from Vendas
