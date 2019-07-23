@@ -101,12 +101,14 @@ select
 --Valor total de vendas 2019
 select
 		SUM(Valor * Quantidade) as 'Valor Total'
-	from Vendas;
+	from Vendas
+	where YEAR(DatInc) = 2019;
 
 --Quantidade total de vendas 2019
 select
 		SUM(Quantidade) as 'Quantidade Total'
-	from Vendas;
+	from Vendas
+	where YEAR(DatInc) = 2019;
 
 --Valor total de vendas por ano
 select
