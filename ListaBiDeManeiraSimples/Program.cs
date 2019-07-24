@@ -70,10 +70,9 @@ namespace ListaBiDeManeiraSimples
                     //vazio "void" que não espera retornar algo
                     return;
                 }
-
-                //Caso ele passe por esta linha identificamos que ele nao encontrou resultados compativeis.
-                Console.WriteLine("Infelismente a busca pelo id não resultou em nenhuma informação.");
             }
+            //Caso ele passe por esta linha identificamos que ele nao encontrou resultados compativeis.
+            Console.WriteLine("Infelismente a busca pelo id não resultou em nenhuma informação.");
         }
     }
 }
