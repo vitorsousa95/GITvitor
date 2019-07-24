@@ -46,7 +46,7 @@ namespace CriacaoDeLista_Organizada.BibliotecaLista
                 lista[i] = string.Empty;
 
             foreach (var item in lista)
-            Console.WriteLine(item);
+                Console.WriteLine(item);
             Console.ReadKey();
         }
     }
