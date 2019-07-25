@@ -40,9 +40,11 @@ namespace UsandoNotasEFrequencias
                 {
                     case "1": { opcao.InserirBoletim(); } break;
                     case "2": { opcao.RemoverBoletim(); } break;
-                    case "3": { opcao.ListarRegistro(); } break;
-                    case "4": { opcao.ListarRegistro("true"); } break;
-                    case "5": { return; }
+                    case "3": { opcao.AlterarNota(); } break;
+                    case "4": { opcao.AlterarFrequencia(); } break;
+                    case "5": { opcao.ListarRegistro(); } break;
+                    case "6": { opcao.ListarRegistro("true"); } break;
+                    case "7": { return; }
                 }
             }
 
@@ -59,9 +61,11 @@ namespace UsandoNotasEFrequencias
             Console.WriteLine("Menu Inicial.");
             Console.WriteLine("1 - Inserir dados do Boletim:");
             Console.WriteLine("2 - Remover dados do Boletim:");
-            Console.WriteLine("3 - Listar Boletim:");
-            Console.WriteLine("4 - Listar boletim removido:");
-            Console.WriteLine("5 - Sair:");
+            Console.WriteLine("3 - Alterar nota do Boletim:");
+            Console.WriteLine("4 - Alterar frequencia Boletim:");
+            Console.WriteLine("5 - Listar Boletim:");
+            Console.WriteLine("6 - Listar boletim removido:");
+            Console.WriteLine("7 - Sair:");
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("\r\n        Digite o número da opção desejada e tecle ENTER:");
             Console.ForegroundColor = ConsoleColor.White;

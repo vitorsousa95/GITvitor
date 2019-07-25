@@ -36,7 +36,7 @@ namespace ExecicioNotasEFrequencias.Cadastro
 
 
             var media = (nota1 + nota2 + nota3) / 3;
-            var frequencia = (totalAulas - numeroFaltas)*100/ totalAulas;
+            var frequencia = (totalAulas - numeroFaltas) * 100 / totalAulas;
 
             for (int i = 0; i < bancoDeDados.GetLength(0); i++)
             {
@@ -111,7 +111,72 @@ namespace ExecicioNotasEFrequencias.Cadastro
             Console.ReadKey();
         }
 
+        public void AlterarNota()
+        {
+            Console.WriteLine("----------------Alterar boletim do aluno----------------");
+            for (int i = 0; i < bancoDeDados.GetLength(0); i++)
+            {
+                if (bancoDeDados[i, 5] != "false")
+                    Console.WriteLine($"\r\nID:{bancoDeDados[i, 0]}" +
+                        $" || Nome do Aluno:{bancoDeDados[i, 1]}" +
+                        $" || Media:{bancoDeDados[i, 2]}" +
+                        $" || Fequencia:{bancoDeDados[i, 3]}%" +
+                        $" || Status:{bancoDeDados[i, 4]}");
+            }
+            Console.WriteLine("\r\nDigite o id do registro a ser removido:");
+            var id = Console.ReadLine();
+            Console.WriteLine("\r\nInforme a primeira nota do aluno:");
+            int.TryParse(Console.ReadLine(), out int nota1);
+            Console.WriteLine("\r\nInforme a segunda nota do aluno:");
+            int.TryParse(Console.ReadLine(), out int nota2);
+            Console.WriteLine("\r\nInforme a terceira nota do aluno:");
+            int.TryParse(Console.ReadLine(), out int nota3);
+            Console.WriteLine("\r\nInforme o total de aulas:");
 
+            var media = (nota1 + nota2 + nota3) / 3;
+
+            for (int i = 0; i < bancoDeDados.GetLength(0); i++)
+            {
+                if (bancoDeDados[i, 0] != null && bancoDeDados[i, 0] == id)
+                    bancoDeDados[i, 2] = media.ToString();
+            }
+            Console.WriteLine("\r\nRegistro atualizado com sucesso!");
+            Console.WriteLine("\r\nPara voltar ao menu inicial precione qualquer tecla");
+            Console.ReadKey();
+
+        }
+
+        public void AlterarFrequencia()
+        {
+            Console.WriteLine("----------------Alterar boletim do aluno----------------");
+            for (int i = 0; i < bancoDeDados.GetLength(0); i++)
+            {
+                if (bancoDeDados[i, 5] != "false")
+                    Console.WriteLine($"\r\nID:{bancoDeDados[i, 0]}" +
+                        $" || Nome do Aluno:{bancoDeDados[i, 1]}" +
+                        $" || Media:{bancoDeDados[i, 2]}" +
+                        $" || Fequencia:{bancoDeDados[i, 3]}%" +
+                        $" || Status:{bancoDeDados[i, 4]}");
+            }
+            Console.WriteLine("\r\nDigite o id do registro a ser removido:");
+            var id = Console.ReadLine();
+            Console.WriteLine("\r\nInforme o total de aulas:");
+            int.TryParse(Console.ReadLine(), out int totalAulas);
+            Console.WriteLine("\r\nInforme o total de faltas:");
+            int.TryParse(Console.ReadLine(), out int numeroFaltas);
+
+            var frequencia = (totalAulas - numeroFaltas) * 100 / totalAulas;
+
+            for (int i = 0; i < bancoDeDados.GetLength(0); i++)
+            {
+                if (bancoDeDados[i, 0] != null && bancoDeDados[i, 0] == id)
+                    bancoDeDados[i, 3] = frequencia.ToString();
+            }
+            Console.WriteLine("\r\nRegistro atualizado com sucesso!");
+            Console.WriteLine("\r\nPara voltar ao menu inicial precione qualquer tecla");
+            Console.ReadKey();
+
+
+        }
     }
-  
 }
