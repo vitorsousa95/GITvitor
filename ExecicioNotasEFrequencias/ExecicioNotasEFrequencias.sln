@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExecicioNotasEFrequencias", "ExecicioNotasEFrequencias.csproj", "{798D189A-F039-462C-96F0-ECEA5FF6E1C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsandoNotasEFrequencias", "..\UsandoNotasEFrequencias\UsandoNotasEFrequencias.csproj", "{8788ACC1-4AC0-4A65-AAE3-16CAF36223FC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{798D189A-F039-462C-96F0-ECEA5FF6E1C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{798D189A-F039-462C-96F0-ECEA5FF6E1C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{798D189A-F039-462C-96F0-ECEA5FF6E1C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{798D189A-F039-462C-96F0-ECEA5FF6E1C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8788ACC1-4AC0-4A65-AAE3-16CAF36223FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8788ACC1-4AC0-4A65-AAE3-16CAF36223FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8788ACC1-4AC0-4A65-AAE3-16CAF36223FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8788ACC1-4AC0-4A65-AAE3-16CAF36223FC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {681BE4A9-5C47-45DC-A4DF-262492F9582B}
+	EndGlobalSection
+EndGlobal
