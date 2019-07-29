@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BancoCeSharp", "BancoCeSharp.csproj", "{0FA984ED-3F37-4FE4-A37C-7658558C3D0E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0FA984ED-3F37-4FE4-A37C-7658558C3D0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FA984ED-3F37-4FE4-A37C-7658558C3D0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FA984ED-3F37-4FE4-A37C-7658558C3D0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FA984ED-3F37-4FE4-A37C-7658558C3D0E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {544FCF75-17CD-4AC7-941F-B901F0A2802F}
+	EndGlobalSection
+EndGlobal
