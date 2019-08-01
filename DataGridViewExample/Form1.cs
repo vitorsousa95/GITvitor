@@ -1,4 +1,5 @@
-﻿using DataGridViewExample.Edicao;
+﻿using DataGridViewExample.Adicao;
+using DataGridViewExample.Edicao;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -80,6 +81,24 @@ namespace DataGridViewExample
         {
             Lixeira lixo = new Lixeira();
             lixo.ShowDialog();
+            this.carrosTableAdapter.CustomQuerry(this.querrysInnerJoinDataSet1.Carros);
+        }
+
+        private void Button6_Click(object sender, EventArgs e)
+        {
+            frmAdicionar formAdd = new frmAdicionar();
+            formAdd.ShowDialog();
+
+            this.carrosTableAdapter.Insert(
+                formAdd.carrosRow.Modelo,
+                formAdd.carrosRow.Ano,
+                formAdd.carrosRow.Marca,
+                true,
+                1,
+                1,
+                DateTime.Now,
+                DateTime.Now
+                );
             this.carrosTableAdapter.CustomQuerry(this.querrysInnerJoinDataSet1.Carros);
         }
     }
