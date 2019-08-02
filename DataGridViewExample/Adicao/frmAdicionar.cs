@@ -23,7 +23,7 @@ namespace DataGridViewExample.Adicao
         private void FrmAdicionar_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'querrysInnerJoinDataSet1.Marcas' table. You can move, or remove it, as needed.
-            this.marcasTableAdapter.Fill(this.querrysInnerJoinDataSet1.Marcas);
+            this.marcasTableAdapter.CustomQuerry(this.querrysInnerJoinDataSet1.Marcas);
 
         }
 

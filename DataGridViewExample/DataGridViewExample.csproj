@@ -52,6 +52,24 @@
     <Compile Include="Adicao\frmAdicionar.Designer.cs">
       <DependentUpon>frmAdicionar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Adicao\frmAdicionarMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adicao\frmAdicionarMarca.Designer.cs">
+      <DependentUpon>frmAdicionarMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Adicao\frmAdicionarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adicao\frmAdicionarUsuario.Designer.cs">
+      <DependentUpon>frmAdicionarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Adicao\frmAdicionarVendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adicao\frmAdicionarVendas.Designer.cs">
+      <DependentUpon>frmAdicionarVendas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Edicao\frmEdicaoCarros.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +94,13 @@
     <Compile Include="Edicao\frmEdicaoVendas.Designer.cs">
       <DependentUpon>frmEdicaoVendas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form5.Designer.cs">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Ususarios.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +132,8 @@
       <DependentUpon>Lixeira.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Carro.cs" />
+    <Compile Include="Model\Marca.cs" />
+    <Compile Include="Model\Vendas.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuerrysInnerJoinDataSet1.Designer.cs">
@@ -116,6 +143,15 @@
     </Compile>
     <EmbeddedResource Include="Adicao\frmAdicionar.resx">
       <DependentUpon>frmAdicionar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adicao\frmAdicionarMarca.resx">
+      <DependentUpon>frmAdicionarMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adicao\frmAdicionarUsuario.resx">
+      <DependentUpon>frmAdicionarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adicao\frmAdicionarVendas.resx">
+      <DependentUpon>frmAdicionarVendas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Edicao\frmEdicaoCarros.resx">
       <DependentUpon>frmEdicaoCarros.cs</DependentUpon>
@@ -140,6 +176,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form4.resx">
       <DependentUpon>Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form5.pt-BR.resx">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form5.resx">
+      <DependentUpon>Form5.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lixeira.resx">
       <DependentUpon>Lixeira.cs</DependentUpon>

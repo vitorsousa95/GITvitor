@@ -50,6 +50,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.carrosTableAdapter = new DataGridViewExample.QuerrysInnerJoinDataSet1TableAdapters.CarrosTableAdapter();
             this.button6 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.carrosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.querrysInnerJoinDataSet1)).BeginInit();
@@ -259,11 +260,26 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.Button6_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.LawnGreen;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(460, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(148, 44);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "BetaTest";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -303,6 +319,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn datAltDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn deletCommandDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button1;
     }
 }
 

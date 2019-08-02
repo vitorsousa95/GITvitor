@@ -43,6 +43,11 @@ namespace DataGridViewExample
             Form4 frmVendas = new Form4();
             frmVendas.ShowDialog();
         }
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            DELETANDO delete = new DELETANDO();
+            delete.ShowDialog();
+        }
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -89,7 +94,8 @@ namespace DataGridViewExample
             frmAdicionar formAdd = new frmAdicionar();
             formAdd.ShowDialog();
 
-            this.carrosTableAdapter.Insert(
+            if (!string.IsNullOrEmpty(formAdd.carrosRow?.Modelo))
+                this.carrosTableAdapter.Insert(
                 formAdd.carrosRow.Modelo,
                 formAdd.carrosRow.Ano,
                 formAdd.carrosRow.Marca,
@@ -101,5 +107,7 @@ namespace DataGridViewExample
                 );
             this.carrosTableAdapter.CustomQuerry(this.querrysInnerJoinDataSet1.Carros);
         }
+
+        
     }
 }
