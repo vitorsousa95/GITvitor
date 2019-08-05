@@ -1,4 +1,5 @@
-﻿using MVCProject.View;
+﻿using MVCProject.Model;
+using MVCProject.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,8 +21,23 @@ namespace MVCProject
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            frmPrincipal menuPrincipal = new frmPrincipal();
-            menuPrincipal.ShowDialog();
+            var result = this.usuariosTableAdapter1.LoginQuery(textBox1.Text, textBox2.Text);
+
+            if (result != null)
+            {
+                Session.user = new Usuario
+                {
+                    Id = (int)result
+                };
+
+                frmPrincipal abre = new frmPrincipal();
+                abre.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Login Invalido!");
+            }
+
         }
     }
 }

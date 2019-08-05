@@ -12,7 +12,7 @@
     <Shape ID="DesignTable:LivroAutor" ZOrder="4" X="553" Y="70" Height="135" Width="243" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="76" />
     <Shape ID="DesignTable:Livros" ZOrder="2" X="70" Y="70" Height="388" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="306" />
     <Shape ID="DesignTable:locacao" ZOrder="15" X="348" Y="1143" Height="342" Width="234" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="260" />
-    <Shape ID="DesignTable:Usuarios" ZOrder="1" X="348" Y="754" Height="342" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="260" />
+    <Shape ID="DesignTable:Usuarios" ZOrder="1" X="348" Y="754" Height="365" Width="253" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="260" />
   </Shapes>
   <Connectors>
     <Connector ID="DesignRelation:FK_LivroAutor_Autores" ZOrder="14" LineWidth="11">
@@ -123,7 +123,7 @@
       <RoutePoints>
         <Point>
           <X>458</X>
-          <Y>1096</Y>
+          <Y>1119</Y>
         </Point>
         <Point>
           <X>458</X>
@@ -135,7 +135,7 @@
       <RoutePoints>
         <Point>
           <X>450</X>
-          <Y>1096</Y>
+          <Y>1119</Y>
         </Point>
         <Point>
           <X>450</X>
@@ -147,7 +147,7 @@
       <RoutePoints>
         <Point>
           <X>442</X>
-          <Y>1096</Y>
+          <Y>1119</Y>
         </Point>
         <Point>
           <X>442</X>

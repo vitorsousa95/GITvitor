@@ -28,6 +28,7 @@ namespace MVCProject.View
 
         private void Button1_Click(object sender, EventArgs e)
         {
+
             frmAdicionarUsuario addUser = new frmAdicionarUsuario();
             addUser.ShowDialog();
 
@@ -57,13 +58,17 @@ namespace MVCProject.View
             {
                 case 0:
                     {
-                        frmEdicaoUsuario editUser = new frmEdicaoUsuario
-                        {
-                            UsuariosRow = userSelect
-                        };
-                    }
+                        frmEdicaoUsuario editUser = new frmEdicaoUsuario();
+                        editUser.Usuarios = userSelect;
+                        editUser.ShowDialog();
+
+                            usuariosTableAdapter.Update(editUser.Usuarios);
+
+                    };
                     break;
             }
+
+            this.usuariosTableAdapter.Fill(this.sistemaBibliotecaDBDataSet.Usuarios);
         }
     }
 }

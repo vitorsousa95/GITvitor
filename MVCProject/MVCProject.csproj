@@ -46,16 +46,65 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Adicionar\frmAdicionarUsuario.cs">
+    <Compile Include="Model\Session.cs" />
+    <Compile Include="View\Adicionar\frmAdicionarAutor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Adicionar\frmAdicionarUsuario.Designer.cs">
+    <Compile Include="View\Adicionar\frmAdicionarAutor.Designer.cs">
+      <DependentUpon>frmAdicionarAutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Adicionar\frmAdicionarEditora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Adicionar\frmAdicionarEditora.Designer.cs">
+      <DependentUpon>frmAdicionarEditora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Adicionar\frmAdicionarGenero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Adicionar\frmAdicionarGenero.Designer.cs">
+      <DependentUpon>frmAdicionarGenero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Adicionar\frmAdicionarLivro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Adicionar\frmAdicionarLivro.Designer.cs">
+      <DependentUpon>frmAdicionarLivro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Adicionar\frmAdicionarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Adicionar\frmAdicionarUsuario.Designer.cs">
       <DependentUpon>frmAdicionarUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Edicao\frmEdicaoUsuario.cs">
+    <Compile Include="View\Edicao\frmEdicaoAutor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Edicao\frmEdicaoUsuario.Designer.cs">
+    <Compile Include="View\Edicao\frmEdicaoAutor.Designer.cs">
+      <DependentUpon>frmEdicaoAutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Edicao\frmEdicaoGenero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Edicao\frmEdicaoGenero.Designer.cs">
+      <DependentUpon>frmEdicaoGenero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Edicao\frmEdicaoLivro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Edicao\frmEdicaoLivro.Designer.cs">
+      <DependentUpon>frmEdicaoLivro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Edicao\frmEdicaoLocacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Edicao\frmEdicaoLocacao.Designer.cs">
+      <DependentUpon>frmEdicaoLocacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Edicao\frmEdicaoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Edicao\frmEdicaoUsuario.Designer.cs">
       <DependentUpon>frmEdicaoUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
@@ -79,6 +128,48 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SistemaBibliotecaDBDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="View\Edicao\frmEditarEditora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Edicao\frmEditarEditora.Designer.cs">
+      <DependentUpon>frmEditarEditora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Adicionar\frmAdicionarLocacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Adicionar\frmAdicionarLocacao.Designer.cs">
+      <DependentUpon>frmAdicionarLocacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmAutores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmAutores.Designer.cs">
+      <DependentUpon>frmAutores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmEditora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmEditora.Designer.cs">
+      <DependentUpon>frmEditora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmGeneros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmGeneros.Designer.cs">
+      <DependentUpon>frmGeneros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmLivro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmLivro.Designer.cs">
+      <DependentUpon>frmLivro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmLocacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmLocacao.Designer.cs">
+      <DependentUpon>frmLocacao.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,10 +182,34 @@
     <Compile Include="View\frmUsuarios.Designer.cs">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Adicionar\frmAdicionarUsuario.resx">
+    <EmbeddedResource Include="View\Adicionar\frmAdicionarAutor.resx">
+      <DependentUpon>frmAdicionarAutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Adicionar\frmAdicionarEditora.resx">
+      <DependentUpon>frmAdicionarEditora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Adicionar\frmAdicionarGenero.resx">
+      <DependentUpon>frmAdicionarGenero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Adicionar\frmAdicionarLivro.resx">
+      <DependentUpon>frmAdicionarLivro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Adicionar\frmAdicionarUsuario.resx">
       <DependentUpon>frmAdicionarUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Edicao\frmEdicaoUsuario.resx">
+    <EmbeddedResource Include="View\Edicao\frmEdicaoAutor.resx">
+      <DependentUpon>frmEdicaoAutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Edicao\frmEdicaoGenero.resx">
+      <DependentUpon>frmEdicaoGenero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Edicao\frmEdicaoLivro.resx">
+      <DependentUpon>frmEdicaoLivro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Edicao\frmEdicaoLocacao.resx">
+      <DependentUpon>frmEdicaoLocacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Edicao\frmEdicaoUsuario.resx">
       <DependentUpon>frmEdicaoUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
@@ -109,6 +224,27 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\Edicao\frmEditarEditora.resx">
+      <DependentUpon>frmEditarEditora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Adicionar\frmAdicionarLocacao.resx">
+      <DependentUpon>frmAdicionarLocacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmAutores.resx">
+      <DependentUpon>frmAutores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmEditora.resx">
+      <DependentUpon>frmEditora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmGeneros.resx">
+      <DependentUpon>frmGeneros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmLivro.resx">
+      <DependentUpon>frmLivro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmLocacao.resx">
+      <DependentUpon>frmLocacao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
