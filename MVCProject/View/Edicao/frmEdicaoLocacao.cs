@@ -16,20 +16,24 @@ namespace MVCProject.View.Edicao
         {
             InitializeComponent();
         }
-
         public MVCProject.SistemaBibliotecaDBDataSet.locacaoRow locacoes;
-
         private void FrmEdicaoLocacao_Load(object sender, EventArgs e)
         {
-            comboBox1.SelectedValue = locacoes.Livro;
-            comboBox2.SelectedValue = locacoes.Usuario;
+            comboBox1.SelectedValue = locacoes.Tipo; 
         }
-
         private void Button1_Click(object sender, EventArgs e)
         {
-            locacoes.Livro = (int)comboBox1.SelectedValue;
-            locacoes.Usuario = (int)comboBox2.SelectedValue;
-
+            locacoes.Tipo = (int)comboBox1.SelectedValue;
+            {
+                switch (comboBox1.SelectedIndex)
+                {
+                     case 0:
+                        {
+                            MessageBox.Show("Você devolveu o livro com sucesso!");
+                        }
+                        break;
+                }
+            }
             this.Close();
         }
     }

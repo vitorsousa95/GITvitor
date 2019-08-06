@@ -21,7 +21,7 @@ namespace MVCProject.View
         private void FrmLocacao_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'sistemaBibliotecaDBDataSet.locacao' table. You can move, or remove it, as needed.
-            this.locacaoTableAdapter.Fill(this.sistemaBibliotecaDBDataSet.locacao);
+            this.locacaoTableAdapter.CustonQuery(this.sistemaBibliotecaDBDataSet.locacao);
 
         }
 
@@ -43,7 +43,7 @@ namespace MVCProject.View
                     DateTime.Now,
                     DateTime.Now);
 
-            this.locacaoTableAdapter.Fill(this.sistemaBibliotecaDBDataSet.locacao);
+            this.locacaoTableAdapter.CustonQuery(this.sistemaBibliotecaDBDataSet.locacao);
         }
 
        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -66,7 +66,7 @@ namespace MVCProject.View
                     break;
             }
 
-            this.locacaoTableAdapter.Fill(this.sistemaBibliotecaDBDataSet.locacao);
+            this.locacaoTableAdapter.CustonQuery(this.sistemaBibliotecaDBDataSet.locacao);
         }
     }
 }

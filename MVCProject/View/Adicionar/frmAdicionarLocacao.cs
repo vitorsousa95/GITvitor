@@ -35,8 +35,20 @@ namespace MVCProject.View
             {
                 Livro = (int)comboBox1.SelectedValue,
                 Usuario = (int)comboBox2.SelectedValue,
-                Tipo = checkedListBox1.SelectedIndex
+                Tipo = comboBox3.SelectedIndex
             };
+            switch (comboBox3.SelectedIndex)
+            {
+                case 0:
+                    {
+                        this.livrosTableAdapter.LocacaoQuery();
+                        MessageBox.Show("Você alocou o livro com sucesso");
+
+                    }
+                    break;
+            };
+
+
             this.Close();
         }
     }

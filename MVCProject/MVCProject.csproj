@@ -47,6 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Session.cs" />
+    <Compile Include="SistemaBibliotecaDBDataSet.cs">
+      <DependentUpon>SistemaBibliotecaDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="View\Adicionar\frmAdicionarAutor.cs">
       <SubType>Form</SubType>
     </Compile>
