@@ -33,70 +33,70 @@ namespace Calculadora
         private void sete_Click(object sender, RoutedEventArgs e)
         {
             display.Text += "7";
-            mediaplayer.Open(new Uri(@"C:\Users\hbsis\Downloads\quack.mp3"));
+            mediaplayer.Open(new Uri(@"C:\Users\hbsis\Downloads\super-mario-coin-sound_rp53n4m.mp3"));
             mediaplayer.Play();
         }
 
         private void zero_Click(object sender, RoutedEventArgs e)
         {
             display.Text += "0";
-            mediaplayer.Open(new Uri(@"C:\Users\hbsis\Downloads\quack.mp3"));
+            mediaplayer.Open(new Uri(@"C:\Users\hbsis\Downloads\super-mario-coin-sound_rp53n4m.mp3"));
             mediaplayer.Play();
         }
 
         private void um_Click(object sender, RoutedEventArgs e)
         {
             display.Text += "1";
-            mediaplayer.Open(new Uri(@"C:\Users\hbsis\Downloads\quack.mp3"));
+            mediaplayer.Open(new Uri(@"C:\Users\hbsis\Downloads\super-mario-coin-sound_rp53n4m.mp3"));
             mediaplayer.Play();
         }
 
         private void dois_Click(object sender, RoutedEventArgs e)
         {
             display.Text += "2";
-            mediaplayer.Open(new Uri(@"C:\Users\hbsis\Downloads\quack.mp3"));
+            mediaplayer.Open(new Uri(@"C:\Users\hbsis\Downloads\super-mario-coin-sound_rp53n4m.mp3"));
             mediaplayer.Play();
         }
 
         private void tres_Click(object sender, RoutedEventArgs e)
         {
             display.Text += "3";
-            mediaplayer.Open(new Uri(@"C:\Users\hbsis\Downloads\quack.mp3"));
+            mediaplayer.Open(new Uri(@"C:\Users\hbsis\Downloads\super-mario-coin-sound_rp53n4m.mp3"));
             mediaplayer.Play();
         }
 
         private void quatro_Click(object sender, RoutedEventArgs e)
         {
             display.Text += "4";
-            mediaplayer.Open(new Uri(@"C:\Users\hbsis\Downloads\quack.mp3"));
+            mediaplayer.Open(new Uri(@"C:\Users\hbsis\Downloads\super-mario-coin-sound_rp53n4m.mp3"));
             mediaplayer.Play();
         }
 
         private void cinco_Click(object sender, RoutedEventArgs e)
         {
             display.Text += "5";
-            mediaplayer.Open(new Uri(@"C:\Users\hbsis\Downloads\quack.mp3"));
+            mediaplayer.Open(new Uri(@"C:\Users\hbsis\Downloads\super-mario-coin-sound_rp53n4m.mp3"));
             mediaplayer.Play();
         }
 
         private void seis_Click(object sender, RoutedEventArgs e)
         {
             display.Text += "6";
-            mediaplayer.Open(new Uri(@"C:\Users\hbsis\Downloads\quack.mp3"));
+            mediaplayer.Open(new Uri(@"C:\Users\hbsis\Downloads\super-mario-coin-sound_rp53n4m.mp3"));
             mediaplayer.Play();
         }
 
         private void oito_Click(object sender, RoutedEventArgs e)
         {
             display.Text += "8";
-            mediaplayer.Open(new Uri(@"C:\Users\hbsis\Downloads\quack.mp3"));
+            mediaplayer.Open(new Uri(@"C:\Users\hbsis\Downloads\super-mario-coin-sound_rp53n4m.mp3"));
             mediaplayer.Play();
         }
 
         private void nove_Click(object sender, RoutedEventArgs e)
         {
             display.Text += "9";
-            mediaplayer.Open(new Uri(@"C:\Users\hbsis\Downloads\quack.mp3"));
+            mediaplayer.Open(new Uri(@"C:\Users\hbsis\Downloads\super-mario-coin-sound_rp53n4m.mp3"));
             mediaplayer.Play();
         }
 
@@ -231,7 +231,7 @@ namespace Calculadora
                     display.Text = d.ToString();
                 }
             }
-            catch (Exception Ex)
+            catch (Exception)
             {
 
                 for (int i = 0; i < 100000; i++)
