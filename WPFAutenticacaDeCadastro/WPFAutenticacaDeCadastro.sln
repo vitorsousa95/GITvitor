@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFAutenticacaDeCadastro", "WPFAutenticacaDeCadastro.csproj", "{65D00F52-BF67-4FFD-8B72-74A5BBDF174F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{65D00F52-BF67-4FFD-8B72-74A5BBDF174F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65D00F52-BF67-4FFD-8B72-74A5BBDF174F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65D00F52-BF67-4FFD-8B72-74A5BBDF174F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65D00F52-BF67-4FFD-8B72-74A5BBDF174F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A3B89C36-1BB6-439C-814C-26679FD66317}
+	EndGlobalSection
+EndGlobal

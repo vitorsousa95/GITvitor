@@ -1,0 +1,33 @@
+﻿<Window x:Class="WPFAutenticacaDeCadastro.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFAutenticacaDeCadastro"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="158*"/>
+            <ColumnDefinition Width="443*"/>
+            <ColumnDefinition Width="193*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="90*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="46*"/>
+            <RowDefinition Height="48*"/>
+            <RowDefinition Height="195*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Nome:" Margin="0,9.6,21.4,0" VerticalAlignment="Top" Grid.Row="1" Height="25" HorizontalAlignment="Right" Width="44" RenderTransformOrigin="1.005,0.568"/>
+        <Label Content="Telefone:" Margin="0,10.6,21.4,0" Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Right" Width="57"/>
+        <Label Content="E-mail:" Margin="0,10.2,21.4,0" Grid.Row="3" VerticalAlignment="Top" RenderTransformOrigin="0.513,0.117" HorizontalAlignment="Right" Width="45"/>
+        <TextBox Name="CampoNome" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="25.6,9.6,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="396"      />
+        <TextBox Name="CampoTelefone" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="25.6,10.6,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="396" />
+        <TextBox Name="CampoEmail" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="25.6,10.2,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="396"   />
+        <Button Content="Salvar" Grid.Column="1" HorizontalAlignment="Left" Margin="99.6,48.2,0,0" Grid.Row="4" VerticalAlignment="Top" Width="179" Height="39" Click="Button_Click"/>
+        <Button Content="Validar Telefone" Grid.Column="2" HorizontalAlignment="Left" Margin="10.2,10.6,0,0" Grid.Row="2" VerticalAlignment="Top" Width="95" Height="23" Click="Button_Click_1"/>
+        <Button Content="Validar E-mail" Grid.Column="2" HorizontalAlignment="Left" Margin="10.2,10.2,0,0" Grid.Row="3" VerticalAlignment="Top" Width="95" Height="23" Click="Button_Click_2"/>
+
+    </Grid>
+</Window>
