@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="WpfAppEntity.View.ucLogin"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfAppEntity.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" Width="530.928">
+    <Grid Margin="10,10,0.2,-0.4">
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\hbsis\Pictures\123.jpg"/>
+        </Grid.Background>
+        <TextBox Name="tbxUsuario" Margin="131,72,34,263" TextWrapping="Wrap" Text="" Background="#7FC2D719"/>
+        <PasswordBox Name="tbxSenha" Margin="131,182,34,155" Background="#7FE2E436"/>
+        <Button Content="Login" Margin="131,290,34,10" Click="Button_Click" Background="#7FD1DC56" FontFamily="Showcard Gothic" FontSize="36"/>
+        <Label Content="Usuario:" HorizontalAlignment="Left" Margin="24,98,0,0" VerticalAlignment="Top" Height="34" RenderTransformOrigin="0.911,0.721" Width="107" FontSize="18" FontFamily="Showcard Gothic" FontWeight="Bold">
+            <Label.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFC0B340" Offset="0.019"/>
+                    <GradientStop Color="White" Offset="0.529"/>
+                </LinearGradientBrush>
+            </Label.Background>
+        </Label>
+        <Label Content="Senha:" HorizontalAlignment="Left" Margin="30,182,0,0" VerticalAlignment="Top" Height="38" RenderTransformOrigin="0.911,0.721" Width="77" FontSize="20" FontFamily="Showcard Gothic">
+            <Label.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFB0CD0B" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.535"/>
+                </LinearGradientBrush>
+            </Label.Background>
+        </Label>
+    </Grid>
+</UserControl>

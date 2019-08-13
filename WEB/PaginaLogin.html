@@ -1,0 +1,87 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+</head>
+<body>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <div class="span3 well well-large offset4">
+        <style>
+            /* Requires: Twitter Bootstrap CSS and JS*/
+
+            #login {
+                margin-top: 10%;
+                box-shadow: 0 0 18px #ccc;
+            }
+        </style>
+        <h4>Account Panel</h4>
+        <div class="form">
+            <input id="login" type="text" placeholder="Email" />
+            <input id="senha" type="password" placeholder="Password" />
+            <label class="checkbox" for="rememberme">
+                <input type="checkbox" /> Remember me
+            </label> <br />
+            <input onclick="Pesquisar()" class="btn btn-success" type="submit" value="Login" /> or <a class="btn" href="#">Create Account</a>
+            <button onclick="Aumentar()">Aumentar fonte</button>
+            <button onclick="Diminuir()">Diminuir fonte</button>
+            <script>
+                var countInc = 16;
+
+                function Aumentar() {
+                    var document1 = document.getElementById('login');
+                    var document2 = document.getElementById('senha');
+                    countInc = countInc + 1;
+                    document1.style.fontSize = (countInc) + "px";
+                    document2.style.fontSize = (countInc) + "px";
+                }
+
+                function Diminuir() {
+                    var document1 = document.getElementById('login');
+                    var document2 = document.getElementById('senha');
+                    countInc = countInc - 1;
+                    document1.style.fontSize = (countInc) + "px";
+                    document2.style.fontSize = (countInc) + "px";
+                }
+            </script>
+            <script>
+                var build = { login: 'admin', password: 'admin', ativo: 'true' };
+                var dB = Object.create(build);
+                dB.login;
+                dB.password;
+                dB.Json = [
+                    {
+                        "id": "1",
+                        "Login": "admin",
+                        "Password": "admin",
+                        "Ativo": "true"
+                    },
+                    {
+                        "id": "2",
+                        "Login": "zezinho",
+                        "Password": "123321",
+                        "Ativo": "false"
+
+                    }];
+                function Pesquisar() {
+                    var confirmLogin = 0;
+                    $.each(dB.Json,
+                        function (index,object) {
+                            var contentVal = $('#login').val();
+                            var contentVal2 = $('#senha').val();
+
+                            if (object.Login == (contentVal) && object.Password == (contentVal2) && object.Ativo == "true") {
+                                confirmLogin = 1;
+                            }
+                        });
+                    if (confirmLogin == 1) {
+                        alert('Login realizado com sucesso!');
+                    }
+                    else {
+                        alert('Usuario desativado ou invalido!');
+                    }
+                }
+            </script>
+        </div>
+    </div>.
+    
+</body>
+</html>

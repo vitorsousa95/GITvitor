@@ -1,0 +1,108 @@
+<html>
+<head>
+    <style>
+        /*Classe especifica*/
+        .ButtomClass {
+            width: 100px;
+            height: 100px;
+        }
+
+        .bolas {
+            width: 10px;
+            height: 10px;
+            background-color: black;
+            border: 1px solid #ff0000;
+            border-radius: 100%;
+            position: absolute;
+        }
+        /*para todas as tags input*/
+        input {
+            width: 500px;
+            height: 500px;
+            border-radius: 25%;
+        }
+
+        .screen {
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="screen">
+        <div id="IdBolas" incrementX="true" posleft="10" incrementY="true" postop="50" speedX="1" speedY="1"class="bolas"></div>
+    </div>
+    <div>
+        <label id="lblBolas">Contador de bolas:{0}</label>
+    </div>
+    <div>
+        <input id="bntClickMe" class="ButtomClass" type="button" value="Bolinhas" onclick="Criar()" />
+    </div>
+    <script>
+        setInterval(Movimento, 5);
+
+        function Movimento() {
+            var countBolas = document.getElementsByClassName('bolas');
+
+            for (var i = 0; i < countBolas.length; i++) {
+                MovimentoX(countBolas[i]);
+                MovimentoY(countBolas[i]);
+            } 
+        }
+        function MovimentoX(object) {
+            var posLeft = parseInt(object.getAttribute("posleft"));
+            var increment = object.getAttribute("incrementX");
+            var idElement = object.getAttribute("id");
+            var speedX = parseInt(object.getAttribute("speedX"));
+
+            if (posLeft < 500 && increment === "true") {
+                object.style.left = (posLeft=posLeft+speedX).toString() + "px";
+            }
+            else {
+                object.style.left = (posLeft=posLeft-speedX).toString() + "px";
+                increment = false;
+                if (posLeft <= 0)
+                    increment = true;
+            }
+            object.setAttribute("incrementX", increment);
+            object.setAttribute("posleft", posLeft);
+        }
+        function MovimentoY(object) {
+            var posTop = parseInt(object.getAttribute("postop"));
+            var increment = object.getAttribute("incrementY");
+            var idElement = object.getAttribute("id");
+            var speedY = parseInt(object.getAttribute("speedY"));
+
+            if (posTop < 500 && increment === "true") {
+                object.style.top = (posTop=posTop+speedY).toString() + "px";
+            }
+            else {
+                object.style.top = (posTop=posTop-speedY).toString() + "px";
+                increment = false;
+                if (posTop <= 0)
+                    increment = true;
+            }
+            object.setAttribute("incrementY", increment);
+            object.setAttribute("postop", posTop);
+        }
+
+        function Criar() {
+            var elementDoc = document.getElementsByClassName('screen')[0];
+            var elementLbl = document.getElementById('lblBolas');
+            var countBolas = document.getElementsByClassName('bolas').length;
+            var speedx = getRandomIntInclusive(1, 5);
+            var speedy = getRandomIntInclusive(1, 5);
+            var randColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+
+            elementDoc.innerHTML += "<div style=\"background-color:"+randColor+"\" speedX="+speedx+" speedY="+speedy+" id=" + countBolas + "    incrementX=\"true\" posleft=\"0\"  incrementY=\"true\" postop=\"50\"class=\"bolas\"></div>"
+            elementLbl.innerHTML = "Contador de bolas:" + countBolas;
+        }
+        function getRandomIntInclusive(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+    </script>
+</body>
+
+</html>
