@@ -1,0 +1,40 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Projeto Web Api</title>
+    <link href="css/prettify.css" rel="stylesheet">
+    <link href="css/hemisu-light.css" rel="stylesheet">
+    <link href="css/screen.css" rel="stylesheet" media="screen">
+    <link href="css/classic.css" rel="stylesheet" media="screen">
+
+</head>
+<body>
+    <div>
+        <form id="formUsu" method="post">
+            <input type="text" name="tbxusuario" placeholder="Informar nome do usuario." />
+            <input type="submit" value="Cadastrar" />
+        </form>
+    </div>
+    <div id="mostraLista" class="cssColumns">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <!--jquery.columns.min.js-->
+        <script type="text/javascript" src="jquery.columns.min.js"></script>
+    </div>
+    <script>
+       /*function CadastroUsuario() {
+            $.ajax({
+                type: 'POST',
+                url: 'http://localhost:65236/api/usuarios',
+                data: JSON.stringify($('#formUsu').serializeArray()),
+                contentType: 'application/json; charset=utf-8',
+                dataType:'json'
+        });
+        }*/
+        $.get('http://localhost:65236/api/usuarios', function (dataApi) {
+            $('#mostraLista').columns({ data: dataApi });
+        });
+    </script>
+
+</body>
+</html>
