@@ -1,14 +1,14 @@
 
     /* Ao carregar o documento o mesmo inicia o conteudo desde script*/
-  	jQuery(document).ready(function(){
+    jQuery(document).ready(function(){
 		/* Indica que o evento submit do form irá realizar esta ação agora*/
-		jQuery('#formusuarios').submit(function(){
+		jQuery('#formlivro').submit(function(){
 			/* Neste contesto 'this' representa o form deste ID  #myform */                
 			var dados = $(this).serialize();
 
 			 var settings = {
 			  "crossDomain": true,
-			  "url": "http://localhost:59271/Api/Usuarios",
+			  "url": "http://localhost:59271/Api/Livros",
 			  "method": "POST",
 			  "headers": {
 				"Content-Type": "application/x-www-form-urlencoded",
@@ -22,7 +22,10 @@
 			});
 			
 			return false;
-		});
+        });
+        
+		TraValoresGenerosSelect();
+		TraValoresEditorasSelect();
 		
 		jQuery('#bntSalvar').click(function(){
 			 Editing();
@@ -32,10 +35,9 @@
 			$('#bntCancelar').hide();
 			
 			$('#Id').val("");
-			$('#Nome').val("");
-			$('#Login').val("");
-			$('#Email').val("");
-			$('#Senha').val("");
+			$('#Titulo').val("");
+			$('#Isbn').val("");
+			$('#Genero').val("");
 			$('#Ativo select').val("true");
 		});
 		
@@ -45,10 +47,9 @@
 			$('#bntCancelar').hide();
 			
 			$('#Id').val("");
-			$('#Nome').val("");
-			$('#Login').val("");
-			$('#Email').val("");
-			$('#Senha').val("");
+			$('#Titulo').val("");
+			$('#Isbn').val("");
+			$('#Genero').val("");
 			$('#Ativo select').val("true");
 		});
 		
@@ -63,7 +64,7 @@
         var settings = {
 			"async": true,
 			"crossDomain": true,
-			"url": "http://localhost:59271/Api/Usuarios/"+id,
+			"url": "http://localhost:59271/Api/Livros/"+id,
 			"method": "GET",
 				"headers": {
 					"Content-Type": "application/json",
@@ -73,22 +74,21 @@
 	
 			$.ajax(settings).done(function (response) {
 				$('#Id').val(response.Id);
-				$('#Nome').val(response.Nome);
-				$('#Login').val(response.Login);
-				$('#Senha').val(response.Senha);
-				$('#Email').val(response.Email);
+				$('#Titulo').val(response.Titulo);
+				$('#Isbn').val(response.Isbn);
+				$('#Genero').val(response.Genero);
 				$('#Ativo select').val(response.Ativo);
 			});
 		
 	}
 	
 	function Editing(){
-		var dados = $('#formusuarios').serialize();
+		var dados = $('#formlivro').serialize();
 		var id = $('#Id').val();
 
 		 var settings = {
 		  "crossDomain": true,
-		  "url": "http://localhost:59271/Api/Usuarios/"+id,
+		  "url": "http://localhost:59271/Api/Livros/"+id,
 		  "method": "PUT",
 		  "headers": {
 			"Content-Type": "application/x-www-form-urlencoded",
@@ -105,7 +105,7 @@
 	function Deleting(id){
 			 var settings = {
 			  "crossDomain": true,
-			  "url": "http://localhost:59271/Api/Usuarios/"+id,
+			  "url": "http://localhost:59271/Api/Livros/"+id,
 			  "method": "DELETE",
 			  "headers": {
 				"Content-Type": "application/x-www-form-urlencoded",
@@ -122,7 +122,7 @@
 			var settings = {
 				"async": true,
 				"crossDomain": true,
-				"url": "http://localhost:59271/Api/Usuarios",
+				"url": "http://localhost:59271/Api/Livros",
 				"method": "GET",
 				"headers": {
 					"Content-Type": "application/json",
@@ -142,9 +142,9 @@
 	   $('#tDataGrid').html(  '<tbody>'
 							+ 	'<tr>'
 							+ 		'<th>ID</th>'
-							+ 		'<th>Nome</th>'
-							+ 		'<th>Login</th>'
-							+ 		'<th>E-mail</th>'
+							+ 		'<th>Titulo</th>'
+							+ 		'<th>Isbn</th>'
+							+ 		'<th>Genero</th>'
 							+ 		'<th>Ativo</th>'
 							+ 		'<th>Opções</th>'
 							+ 	'</tr>'
@@ -153,9 +153,9 @@
 		$.each(contentValue,function(index,value) {
         var row =     '<tr>'
 						+ '<td>' + value.Id       + '</td>'
-						+ '<td>' + value.Nome    + '</td>'
-						+ '<td>' + value.Login    + '</td>'
-						+ '<td>' + value.Email    + '</td>'
+						+ '<td>' + value.Titulo    + '</td>'
+						+ '<td>' + value.Isbn    + '</td>'
+						+ '<td>' + value.Genero    + '</td>'
 						+ '<td>' + value.Ativo    + '</td>'
 						+ '<td>' 
 						+ 	'<div    class=\'col-md-12\' style=\'float: right;\'>'
@@ -171,6 +171,50 @@
         $('#tDataGrid').append(row);
 		});
     }
+    function TraValoresGenerosSelect() {
+        var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "http://localhost:59271/Api/Generos/",
+            "method": "GET",
+                "headers": {
+                    "Content-Type": "application/json",
+                    "Accept": "*/*"
+                }
+            }
+    
+            var selectbox = $('#Genero');
+            selectbox.find('option').remove();
+        
+            $.ajax(settings).done(function (response) {
+                for (let i = 0; i < response.length; i++) {
+                    $('<option>').val(response[i].Id).text(response[i].Tipo).appendTo(selectbox);				
+                }			
+            });
+	}
+	function TraValoresEditorasSelect() {
+        var settings = {
+			  "async": true,
+			  "crossDomain": true,
+			  "url": "http://localhost:59271/Api/Editoras/",
+			  "method": "GET",
+			  "headers": {
+				"Content-Type": "application/json",
+				"Accept": "*/*"
+			  }
+            }
+    
+            var selectbox = $('#Editora');
+            selectbox.find('option').remove();
+        
+            $.ajax(settings).done(function (response) {
+                for (let i = 0; i < response.length; i++) {
+                    $('<option>').val(response[i].Id).text(response[i].Nome).appendTo(selectbox);				
+                }			
+            });
+    }
+    
+    
 	
 	
   
